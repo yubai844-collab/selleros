@@ -1,26 +1,31 @@
-# selleros
-Cross-border E-commerce Seller Operations &amp; Growth Analytics Dashboard
-# SellerOS — Cross-border Seller Operations Intelligence
+# SellerOS 14.0 — GitHub Pages 公开作品集版
 
-A self-contained, offline-capable HTML portfolio prototype for brand/store operations. Double-click `index.html` to open; no login, Python, npm, or API key is required.
+## 作品集定位
 
-## What it includes
-- Store overview (explicitly simulated teaching data)
-- Product selection: local CSV import of public Amazon-style product listings
-- Listing audit (explainable field-based rules)
-- Ads: illustrative keyword ACOS diagnostics
-- Inventory: editable coverage and replenishment calculator
-- Profit: editable unit contribution-margin calculator
-- Conversion: editable traffic-to-purchase funnel
-- Methods and data provenance page
+消费电子品牌运营与 TWS 新品上市分析的交互式求职作品集。保留 Cream & Sage 视觉设计、商品图片、选品列表、单品驾驶舱、利润与库存情景模拟。
 
-## Real data
-Download the source `amazon.csv` separately from https://github.com/thanhmaitran/amazon-product-intelligence and use the import control in the Product Selection tab. The file is parsed locally in the browser and is not uploaded. Review the source data's licensing and usage conditions before redistributing it.
+## 重要数据声明
 
-**Important:** the default dataset is fabricated for interface demonstration. Real product data contains listing-level fields but not actual advertising spend, impressions, stock, COGS, or conversion data. Those sections remain labeled simulations even after CSV import.
+- `data/products.json` 含 **16 条自行构造的演示商品**，图片为原创 SVG 图标。它们不是真实 Amazon 商品，也不是历史 865 条研究记录。
+- 本地研究版使用的第三方 865 条商品记录**没有**包含在公开版中，原因是再分发许可尚未确认。
+- `strategy.html`、`launch.html`、`portfolio.html` 中的竞品研究结论与历史参考价格属于案例研究材料，不能视为实时市场价格或代表性市场统计；如有具体规格请以品牌官方信息为准。
+- 广告花费、ACOS、库存、利润、转化及预测为**情景假设**，不代表实际运营结果。
+- AI 生成的耳机氛围图片是装饰性素材，不是竞品实拍。
 
-## Deploy
-Create a public GitHub repository, upload `index.html` to its root, go to Settings > Pages > Deploy from a branch > main / root. Alternatively, upload this folder to Netlify Drop. The HTML is self-contained and does not depend on third-party CDNs.
+## 发布方法
 
-## Portfolio integrity
-Credit the public dataset source and any AI assistance. Claim only the analytical design, code modifications, validation, and business reasoning you actually performed. Do not present simulated business KPIs as actual merchant results.
+把此文件夹**内部的全部文件与子文件夹**上传到 GitHub 仓库根目录（不是上传 ZIP，也不是再嵌套一个文件夹）。在 Settings → Pages 选择 Deploy from a branch / main / (root)。
+
+## 本地预览
+
+`python3 -m http.server 8002 --bind 127.0.0.1`
+
+## 项目文件
+
+- `index.html` 经营总览与商品机会池
+- `workspace.html` 单品经营驾驶舱
+- `strategy.html` 品类策略
+- `launch.html` TWS 上市决策
+- `portfolio.html` 求职作品集展示
+- `data/products.json` 自制演示数据（16 条）
+- `assets/` 原创图标和 AI 生成氛围图片
